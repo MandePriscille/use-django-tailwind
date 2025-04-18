@@ -1,4 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    {% for i in '123456789012' %}
+        <div class="bg-white rounded-lg overflow shadow">
+            <div class="relative">
+                <img src="https://via.placeholder.com/320x180" alt="Vignette vidéo" class="w-full h-48 object-cover">
+                <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white text-xs px-1 rounded">10:30</span>
+            </div>
+            <div class="p-4">
+                <h3 class="text-sm font-medium text-gray-900 truncate">Titre de la vidéo</h3>
+                <p class="text-xs text-gray-600 mt-1">Nom de la chaîne</p>
+                <p class="text-xs text-gray-500 mt-1">1,2M vues • Il y a 3 jours</p>
+            </div>
+        </div>
+    {% endfor%}
 
 {% endblock %}
